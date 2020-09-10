@@ -1,0 +1,60 @@
+---
+title: 'Stats 250: Homework 1'
+author: "Homework Team"
+date: "September 4, 2020"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+Homework assignments will typically contain a couple questions that test your ability to use R for data analysis. Each week, we will provide you with an R Markdown template (like this one) that you will use to alter or create code that generates some sort of desired output. This "desired output" might be in the form of a numerical summary, a table, a plot, or even the result of a statistical test. In order to 
+
+### Ann Arbor Trees
+
+We'll be using the Ann Arbor trees data set that we used in Lab 2. This data set contains information about a subset of the top nine types of trees planted around Ann Arbor in 2009. Check out Lab 2 if you'd like more information about the data set. Be sure to run the code chunk below to read in the data set.
+
+```{r readData, error = T}
+a2trees <- read.csv("a2trees_clean.csv")
+```
+
+#### Question 1
+
+Create a bar chart for the `Place` variable in the `a2trees` data set. **Be sure to include a proper title and axis labels.**  
+
+```{r placePlot, error = T}
+# Feel free to copy, paste, and alter code from your Lab 1 or Lab 2 assignment! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+
+```
+
+To submit your completed plot, you can either:
+
+- Right click on your plot and click "Save Image".
+
+OR
+
+- Take a screen shot of the plot (Mac users can hit "Command + Shift + 4" to take a select the portion of their screen to capture; Windows users can hit "Windows logo + Shift + S" to do the same).
+
+Whichever you prefer! Then head to Course.Work and upload your saved image.
+
+
+#### Question 2
+
+Create a table for the variable `LandmarkTree` variable in the `a2trees` data set.  
+
+```{r landmarkTable, error = T}
+# Feel free to copy, paste, and alter code from your Lab 2 assignment! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+
+```
+
+To submit your completed table, you can either:
+
+- Copy and paste the output into Course.Work (be careful of the text shifting when you paste it).
+
+OR
+
+- Take a screen shot of the plot (Mac users can hit "Command + Shift + 4" to take a select the portion of their screen to capture; Windows users can hit "Windows logo + Shift + S" to do the same). Then head to Course.Work and upload your saved image.
