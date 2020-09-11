@@ -1,9 +1,13 @@
 ---
-title: 'Stats 250: Homework 1'
+title: 'Stats 250: Homework 2'
 author: "Homework Team"
-date: "September 4, 2020"
+date: "September 11, 2020"
 output:
-  html_document: default
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: lumen
 ---
 
 ```{r setup, include=FALSE}
@@ -12,22 +16,66 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Instructions
 
-Homework assignments will typically contain a couple questions that test your ability to use R for data analysis. Each week, we will provide you with an R Markdown template (like this one) that you will use to alter or create code that generates some sort of desired output. This "desired output" might be in the form of a numerical summary, a table, a plot, or even the result of a statistical test. In order to 
+Homework assignments will typically contain a couple questions that test your ability to use R for data analysis. Each week, we will provide you with an R Markdown template that you will use to alter or create code that generates some sort of desired output. This "desired output" might be in the form of a numerical summary, a table, a plot, or even the result of a statistical test. 
 
-### Ann Arbor Trees
+<hr />
 
-We'll be using the Ann Arbor trees data set that we used in Lab 2. This data set contains information about a subset of the top nine types of trees planted around Ann Arbor in 2009. Check out Lab 2 if you'd like more information about the data set. Be sure to run the code chunk below to read in the data set.
+## Statistics Student Survey
+
+This week, in preparation for your first MWrite assignment, we will use a data set constructed from a random sample from the Stats 250 Fall 2020 Student Survey (if you filled it out, you may be part of this dataset!). 
 
 ```{r readData, error = T}
-a2trees <- read.csv("a2trees_clean.csv")
+stats250survey <- read.csv("mwrite_data.csv")
 ```
 
-#### Question 1
+Let's check out a quick preview of the data set using the `head()` function.
 
-Create a bar chart for the `Place` variable in the `a2trees` data set. **Be sure to include a proper title and axis labels.**  
+```{r previewData, error = T}
+head(stats250survey)
+```
 
-```{r placePlot, error = T}
-# Feel free to copy, paste, and alter code from your Lab 1 or Lab 2 assignment! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+The data set `stats250survey` contains the following list of variables:
+
+| Variable name | Description |
+|:--------------|:----------------------------------------|
+|`a2_return`| Returned to Ann Arbor for Fall 2020 (Yes, No) |
+|`hometown_distance`| Distance between hometown residence and the Diag (in miles) |
+|`residency_status`| U-M residency status (In-State, Out-of-State Domestic, International) |
+|`class_standing`| Class standing (First Year, Sophomore, Junior, Senior, Other) |
+|`transfer_student`| Transfer student (Yes, No) |
+|`extroversion`| Self-described extroversion (Introvert, In Between, Extrovert) |
+
+
+<hr />
+
+
+## Homework Tasks
+
+### Question 9a - Part 1 (Table)
+
+Using the `stats250survey` data set, create a table for the response variable `a2_return` (the variable indicating whether the student returned to Ann Arbor for Fall 2020 or not). 
+
+```{r a2returnTable, error = T}
+# Feel free to copy, paste, and alter code from previous lab assignments! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+
+```
+
+To submit your completed table, you can either:
+
+- Copy and paste the output into Course.Work (be careful of the text shifting when you paste it).
+
+OR
+
+- Take a screen shot of the plot (Mac users can hit "Command + Shift + 4" to take a select the portion of their screen to capture; Windows users can hit "Windows logo + Shift + S" to do the same). Then head to Course.Work and upload your saved image.
+
+
+
+### Question 9a - Part 2 (Bar Chart)
+
+Using the `stats250survey` data set, create a bar chart for the response variable `a2_return`. As a friendly reminder, your plot should include an appropriate title containing the type of plot produced, the variable plotted, and the your name or initials.
+
+```{r a2returnBarChart, error = T}
+# Feel free to copy, paste, and alter code from previous lab assignments! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
 
 ```
 
@@ -39,22 +87,29 @@ OR
 
 - Take a screen shot of the plot (Mac users can hit "Command + Shift + 4" to take a select the portion of their screen to capture; Windows users can hit "Windows logo + Shift + S" to do the same).
 
-Whichever you prefer! Then head to Course.Work and upload your saved image.
 
 
-#### Question 2
+### Question 9b - Part 1 (Exp Var 1)
 
-Create a table for the variable `LandmarkTree` variable in the `a2trees` data set.  
+In order to help you better understand how student characteristics have influenced their decision on whether or not they return to Ann Arbor for Fall 2020, you are asked to identify **two** explanatory variables of interest from the list of variables in the `stats250survey` data set.
 
-```{r landmarkTable, error = T}
-# Feel free to copy, paste, and alter code from your Lab 2 assignment! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+Provide a table or graphical summary for the *first* explantory variable you selected. This table or graphical summary will help you explore the relationship between your first explanatory variable of interest and the response variable `a2_return`.
+
+```{r stats250surveySummary1, error = T}
+# Feel free to copy, paste, and alter code from previous lab assignments! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
 
 ```
 
-To submit your completed table, you can either:
+To submit a table, refer to the instructions in Question 9a - Part 1, above. To submit a plot, refer to the instructions in Question 9a - Part 2, above. 
 
-- Copy and paste the output into Course.Work (be careful of the text shifting when you paste it).
+### Question 9b - Part 2 (Exp Var 2)
 
-OR
+Provide a table or graphical summary for the *second* explantory variable you selected. This table or graphical summary will help you explore the relationship between your second explanatory variable of interest and the response variable `a2_return`.
 
-- Take a screen shot of the plot (Mac users can hit "Command + Shift + 4" to take a select the portion of their screen to capture; Windows users can hit "Windows logo + Shift + S" to do the same). Then head to Course.Work and upload your saved image.
+```{r stats250surveySummary2, error = T}
+# Feel free to copy, paste, and alter code from previous lab assignments! (Remember that this text is a comment, so R ignores it; you can delete it if you want. If you don't delete it, START CODE ON THE NEXT BLANK LINE)
+
+```
+
+To submit a table, refer to the instructions in Question 9a - Part 1, above. To submit a plot, refer to the instructions in Question 9a - Part 2, above.
+
